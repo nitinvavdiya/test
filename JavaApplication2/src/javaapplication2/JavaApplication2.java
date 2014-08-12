@@ -20,6 +20,10 @@ public class JavaApplication2 {
         //hello 
         
         
+        //test
+        System.out.println("this is test in git");
+        //
+        
         System.out.println("");
     }
     
