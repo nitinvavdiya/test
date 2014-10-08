@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.UserMaster" table="user_master" catalog="templelatest">
+        <id name="userMasterId" type="java.lang.Integer">
+            <column name="user_master_id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="50" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="65535" not-null="true" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="50" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="50" not-null="true" />
+        </property>
+        <property name="emailid" type="string">
+            <column name="emailid" length="65535" not-null="true" />
+        </property>
+        <property name="mobileNo" type="double">
+            <column name="mobile_no" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="guid" type="int">
+            <column name="guid" not-null="true" />
+        </property>
+        <property name="roleId" type="int">
+            <column name="role_id" not-null="true" />
+        </property>
+        <property name="templeMasterId" type="int">
+            <column name="temple_master_id" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="DRecordStartdate" type="timestamp">
+            <column name="d_record_startdate" length="19" not-null="true" />
+        </property>
+        <property name="DRecordEnddate" type="timestamp">
+            <column name="d_record_enddate" length="19" not-null="true" />
+        </property>
+        <set name="userInfos" table="user_info" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_master_id" not-null="true" />
+            </key>
+            <one-to-many class="com.vdtltest.UserInfo" />
+        </set>
+        <set name="userAddressInfos" table="user_address_info" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_master_id" not-null="true" />
+            </key>
+            <one-to-many class="com.vdtltest.UserAddressInfo" />
+        </set>
+    </class>
+</hibernate-mapping>

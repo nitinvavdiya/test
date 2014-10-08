@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.PurchaseInvoiceTable" table="purchase_invoice_table" catalog="templelatest">
+        <id name="purchaseId" type="java.lang.Integer">
+            <column name="purchase_id" />
+            <generator class="identity" />
+        </id>
+        <property name="itemId" type="int">
+            <column name="item_id" not-null="true" />
+        </property>
+        <property name="supplierId" type="int">
+            <column name="supplier_id" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="qty" type="int">
+            <column name="qty" not-null="true" />
+        </property>
+        <property name="priceperunit" type="double">
+            <column name="priceperunit" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="totalprize" type="double">
+            <column name="totalprize" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="unitId" type="int">
+            <column name="unit_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

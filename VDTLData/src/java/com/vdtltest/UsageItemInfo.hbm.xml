@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.UsageItemInfo" table="usage_item_info" catalog="templelatest">
+        <id name="usageItemInfoId" type="java.lang.Integer">
+            <column name="usage_item_info_id" />
+            <generator class="identity" />
+        </id>
+        <property name="consumptionId" type="int">
+            <column name="consumption_id" not-null="true" />
+        </property>
+        <property name="itemId" type="int">
+            <column name="item_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

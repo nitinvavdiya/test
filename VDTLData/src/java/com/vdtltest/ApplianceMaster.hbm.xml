@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.ApplianceMaster" table="appliance_master" catalog="templelatest">
+        <id name="applianceId" type="java.lang.Integer">
+            <column name="appliance_id" />
+            <generator class="identity" />
+        </id>
+        <property name="templeMasterId" type="int">
+            <column name="temple_master_id" not-null="true" />
+        </property>
+        <property name="applianceName" type="string">
+            <column name="appliance_name" length="50" not-null="true" />
+        </property>
+        <property name="applianceQty" type="int">
+            <column name="appliance_qty" not-null="true" />
+        </property>
+        <property name="applianceRate" type="int">
+            <column name="appliance_rate" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

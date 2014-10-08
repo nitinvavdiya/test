@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.SupplierMaster" table="supplier_master" catalog="templelatest">
+        <id name="supplierId" type="java.lang.Integer">
+            <column name="supplier_id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="65535" not-null="true" />
+        </property>
+        <property name="pincodeNo" type="int">
+            <column name="pincode_no" not-null="true" />
+        </property>
+        <property name="mobileNo" type="double">
+            <column name="mobile_no" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="mobileNo2" type="double">
+            <column name="mobile_no_2" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="cityId" type="int">
+            <column name="city_id" not-null="true" />
+        </property>
+        <property name="stateId" type="int">
+            <column name="state_id" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="emailId" type="string">
+            <column name="email_id" length="100" not-null="true" />
+        </property>
+        <property name="facebookId" type="string">
+            <column name="facebook_id" length="50" not-null="true" />
+        </property>
+        <property name="faxNo" type="double">
+            <column name="fax_no" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="birthdate" type="date">
+            <column name="birthdate" length="10" not-null="true" />
+        </property>
+        <property name="electionCardNo" type="string">
+            <column name="election_card_no" length="50" not-null="true" />
+        </property>
+        <property name="adharCardNo" type="string">
+            <column name="adhar_card_no" length="50" not-null="true" />
+        </property>
+        <property name="drivingLicenceNo" type="string">
+            <column name="driving_licence_no" length="50" not-null="true" />
+        </property>
+        <property name="pancardNo" type="string">
+            <column name="pancard_no" length="50" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="DRecordStartdate" type="timestamp">
+            <column name="d_record_startdate" length="19" not-null="true" />
+        </property>
+        <property name="DRecordEnddate" type="timestamp">
+            <column name="d_record_enddate" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

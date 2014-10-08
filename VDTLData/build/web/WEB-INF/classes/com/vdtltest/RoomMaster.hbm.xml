@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.RoomMaster" table="room_master" catalog="templelatest">
+        <id name="roomMasterId" type="java.lang.Integer">
+            <column name="room_master_id" />
+            <generator class="identity" />
+        </id>
+        <property name="roomNo" type="string">
+            <column name="room_no" length="50" not-null="true" />
+        </property>
+        <property name="roomTypeId" type="int">
+            <column name="room_type_id" not-null="true" />
+        </property>
+        <property name="rate" type="double">
+            <column name="rate" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="deposit" type="double">
+            <column name="deposit" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="capacity" type="int">
+            <column name="capacity" not-null="true" />
+        </property>
+        <property name="maxAllowed" type="int">
+            <column name="max_allowed" not-null="true" />
+        </property>
+        <property name="extraMemberRate" type="double">
+            <column name="extra_member_rate" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="threshold" type="int">
+            <column name="threshold" not-null="true" />
+        </property>
+        <property name="isActive" type="int">
+            <column name="is_active" not-null="true" />
+        </property>
+        <property name="floorId" type="int">
+            <column name="floor_id" not-null="true" />
+        </property>
+        <property name="buildingId" type="int">
+            <column name="building_id" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

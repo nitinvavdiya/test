@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.ConsumptionMaster" table="consumption_master" catalog="templelatest">
+        <id name="consumptionId" type="java.lang.Integer">
+            <column name="consumption_id" />
+            <generator class="identity" />
+        </id>
+        <property name="consumptionName" type="string">
+            <column name="consumption_name" length="50" not-null="true" />
+        </property>
+        <property name="consumptionDescription" type="string">
+            <column name="consumption_description" length="150" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="DRecordStartdate" type="timestamp">
+            <column name="d_record_startdate" length="19" not-null="true" />
+        </property>
+        <property name="DRecordEnddate" type="timestamp">
+            <column name="d_record_enddate" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

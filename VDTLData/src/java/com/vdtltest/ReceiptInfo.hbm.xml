@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.ReceiptInfo" table="receipt_info" catalog="templelatest">
+        <id name="receiptId" type="java.lang.Integer">
+            <column name="receipt_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userMasterId" type="int">
+            <column name="user_master_id" not-null="true" />
+        </property>
+        <property name="accountId" type="int">
+            <column name="account_id" not-null="true" />
+        </property>
+        <property name="rupees" type="double">
+            <column name="rupees" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name=" quantity" not-null="true" />
+        </property>
+        <property name="unitId" type="int">
+            <column name="unit_id" not-null="true" />
+        </property>
+        <property name="note" type="string">
+            <column name="note" length="65535" not-null="true" />
+        </property>
+        <property name="specialNote" type="string">
+            <column name="special_note" length="65535" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name=" system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

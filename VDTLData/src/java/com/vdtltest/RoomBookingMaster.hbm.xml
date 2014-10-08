@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.RoomBookingMaster" table="room_booking_master" catalog="templelatest">
+        <id name="roomBookingId" type="java.lang.Integer">
+            <column name="room_booking_id" />
+            <generator class="identity" />
+        </id>
+        <property name="roomNo" type="int">
+            <column name="room_no" not-null="true" />
+        </property>
+        <property name="extraItemRate" type="double">
+            <column name="extra_item_rate" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="extraMemberRate" type="double">
+            <column name="extra_member_rate" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="roomRate" type="double">
+            <column name="room_rate" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="advancePayment" type="double">
+            <column name="advance_payment" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="deposit" type="double">
+            <column name="deposit" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="totalAmount" type="double">
+            <column name="total_amount" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="checkinDate" type="date">
+            <column name="checkin_date" length="10" not-null="true" />
+        </property>
+        <property name="checkoutDate" type="date">
+            <column name="checkout_date" length="10" not-null="true" />
+        </property>
+        <property name="userMasterId" type="int">
+            <column name="user_master_id" not-null="true" />
+        </property>
+        <property name="templeMasterId" type="int">
+            <column name="temple_master_id" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

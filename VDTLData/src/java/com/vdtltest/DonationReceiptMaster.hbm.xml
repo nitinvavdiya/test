@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.DonationReceiptMaster" table="donation_receipt_master" catalog="templelatest">
+        <id name="receiptId" type="java.lang.Integer">
+            <column name="receipt_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userInfo" class="com.vdtltest.UserInfo" fetch="select">
+            <column name="user_master_id" not-null="true" />
+        </many-to-one>
+        <property name="note" type="string">
+            <column name="note" length="65535" not-null="true" />
+        </property>
+        <property name="specialNote" type="string">
+            <column name="special_note" length="65535" not-null="true" />
+        </property>
+        <property name="specialDate" type="date">
+            <column name="special_date" length="10" not-null="true" />
+        </property>
+        <property name="totalAmount" type="double">
+            <column name="total_amount" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="receiptTempleId" type="int">
+            <column name="receipt_temple_id" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="dt" type="timestamp">
+            <column name="dt" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

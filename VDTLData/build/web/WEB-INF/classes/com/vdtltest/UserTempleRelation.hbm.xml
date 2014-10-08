@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.UserTempleRelation" table="user_temple_relation" catalog="templelatest">
+        <id name="userTempleRelationId" type="java.lang.Integer">
+            <column name="user_temple_relation_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userMasterId" type="int">
+            <column name="user_master_id" not-null="true" />
+        </property>
+        <property name="templeMasterId" type="int">
+            <column name="temple_master_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

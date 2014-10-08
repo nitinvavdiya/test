@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.UserInfo" table="user_info" catalog="templelatest">
+        <id name="userInfoId" type="java.lang.Integer">
+            <column name="user_info_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userMaster" class="com.vdtltest.UserMaster" fetch="select">
+            <column name="user_master_id" not-null="true" />
+        </many-to-one>
+        <property name="address" type="string">
+            <column name="address" length="65535" not-null="true" />
+        </property>
+        <property name="landlineNo" type="int">
+            <column name="landline_no" not-null="true" />
+        </property>
+        <property name="dob" type="string">
+            <column name="dob" length="15" not-null="true" />
+        </property>
+        <property name="facebookId" type="string">
+            <column name="facebook_id" length="50" not-null="true" />
+        </property>
+        <property name="electionCardNo" type="string">
+            <column name="election_card_no" length="50" not-null="true" />
+        </property>
+        <property name="adharCardNo" type="string">
+            <column name="adhar_card_no" length="50" not-null="true" />
+        </property>
+        <property name="drivingLicenceNo" type="string">
+            <column name="driving_licence_no" length="50" not-null="true" />
+        </property>
+        <property name="pancardNo" type="string">
+            <column name="pancard_no" length="50" not-null="true" />
+        </property>
+        <property name="pincode" type="int">
+            <column name="pincode" not-null="true" />
+        </property>
+        <property name="image" type="string">
+            <column name="image" length="65535" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="donationReceiptMasters" table="donation_receipt_master" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_master_id" not-null="true" />
+            </key>
+            <one-to-many class="com.vdtltest.DonationReceiptMaster" />
+        </set>
+    </class>
+</hibernate-mapping>

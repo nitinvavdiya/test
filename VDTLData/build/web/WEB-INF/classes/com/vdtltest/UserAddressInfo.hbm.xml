@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.UserAddressInfo" table="user_address_info" catalog="templelatest">
+        <id name="userInfoAddressId" type="java.lang.Integer">
+            <column name="user_info_address_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userMaster" class="com.vdtltest.UserMaster" fetch="select">
+            <column name="user_master_id" not-null="true" />
+        </many-to-one>
+        <property name="address" type="string">
+            <column name="address" length="65535" not-null="true" />
+        </property>
+        <property name="countryId" type="int">
+            <column name="country_id" not-null="true" />
+        </property>
+        <property name="stateId" type="int">
+            <column name="state_id" not-null="true" />
+        </property>
+        <property name="cityId" type="int">
+            <column name="city_id" not-null="true" />
+        </property>
+        <property name="areaId" type="int">
+            <column name="area_id" not-null="true" />
+        </property>
+        <property name="pincode" type="double">
+            <column name="pincode" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="DRecordStartdate" type="date">
+            <column name="d_record_startdate" length="10" not-null="true" />
+        </property>
+        <property name="DRecordEnddate" type="date">
+            <column name="d_record_enddate" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.LoginLog" table="login_log" catalog="templelatest">
+        <id name="loginLogId" type="java.lang.Integer">
+            <column name="login_log_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userMasterId" type="int">
+            <column name="user_master_id" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="roleId" type="int">
+            <column name="role_id" not-null="true" />
+        </property>
+        <property name="domain" type="string">
+            <column name="domain" length="65535" not-null="true" />
+        </property>
+        <property name="ip" type="string">
+            <column name="ip" length="65535" not-null="true" />
+        </property>
+        <property name="datetime" type="timestamp">
+            <column name="datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

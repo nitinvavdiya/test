@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.SupplierItemTable" table="supplier_item_table" catalog="templelatest">
+        <id name="supplierItemId" type="java.lang.Integer">
+            <column name="supplier_item_id" />
+            <generator class="identity" />
+        </id>
+        <property name="supplierId" type="int">
+            <column name="supplier_id" not-null="true" />
+        </property>
+        <property name="itemId" type="int">
+            <column name="item_id" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+        <property name="unitId" type="int">
+            <column name="unit_id" not-null="true" />
+        </property>
+        <property name="totalPrize" type="double">
+            <column name="total_prize" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="totalTax" type="double">
+            <column name="total_tax" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="shippingCost" type="double">
+            <column name="shipping_cost" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="pricePerUnit" type="double">
+            <column name="price_per_unit" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="isPaid" type="byte">
+            <column name="is_paid" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

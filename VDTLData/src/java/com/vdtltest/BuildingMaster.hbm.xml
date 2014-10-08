@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.BuildingMaster" table="building_master" catalog="templelatest">
+        <id name="buildingId" type="java.lang.Integer">
+            <column name="building_id" />
+            <generator class="identity" />
+        </id>
+        <property name="buildingName" type="string">
+            <column name="building_name" length="50" not-null="true" />
+        </property>
+        <property name="registrationNo" type="int">
+            <column name="registration_no" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="50" not-null="true" />
+        </property>
+        <property name="contactNo" type="int">
+            <column name="contact_no" not-null="true" />
+        </property>
+        <property name="floor" type="int">
+            <column name="floor" not-null="true" />
+        </property>
+        <property name="plotNo" type="int">
+            <column name="plot_no" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="campusId" type="int">
+            <column name="campus_id" not-null="true" />
+        </property>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="DRecordStartdate" type="timestamp">
+            <column name="d_record_startdate" length="19" not-null="true" />
+        </property>
+        <property name="DRecordEnddate" type="timestamp">
+            <column name="d_record_enddate" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

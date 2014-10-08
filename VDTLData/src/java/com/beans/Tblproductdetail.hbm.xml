@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 Oct, 2014 9:57:09 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.beans.Tblproductdetail" table="tblproductdetail" catalog="vdtl">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblproduct" class="com.beans.Tblproduct" fetch="select">
+            <column name="productid" not-null="true" />
+        </many-to-one>
+        <property name="minrs" type="int">
+            <column name="minrs" not-null="true" />
+        </property>
+        <property name="maxrs" type="int">
+            <column name="maxrs" not-null="true" />
+        </property>
+        <property name="maxqty" type="int">
+            <column name="maxqty" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

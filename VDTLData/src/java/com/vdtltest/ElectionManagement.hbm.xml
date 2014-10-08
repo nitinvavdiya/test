@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.ElectionManagement" table="election_management" catalog="templelatest">
+        <id name="electionId" type="java.lang.Integer">
+            <column name="election_id" />
+            <generator class="identity" />
+        </id>
+        <property name="areaId" type="int">
+            <column name="area_id" not-null="true" />
+        </property>
+        <property name="yearId" type="int">
+            <column name="year_id" not-null="true" />
+        </property>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="fromDate" type="timestamp">
+            <column name="from_date" length="19" not-null="true" />
+        </property>
+        <property name="toDate" type="timestamp">
+            <column name="to_date" length="19" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/templelatest?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">nitin</property>
+    <property name="show_sql">true</property>
+    <mapping resource="com/vdtltest/UserMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/RoomTypeMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/GuestUserMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/UsageItemStockInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/StateMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/PrasadParameter.hbm.xml"/>
+    <mapping resource="com/vdtltest/CampusMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/LoginLog.hbm.xml"/>
+    <mapping resource="com/vdtltest/ModuleMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/CountryMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/TempleMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/ReceiptInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/UnitMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/RoleMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/UserAddressInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/EventMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/UnitFormula.hbm.xml"/>
+    <mapping resource="com/vdtltest/RoomBookingMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/CityMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/PurchaseInvoiceTable.hbm.xml"/>
+    <mapping resource="com/vdtltest/ExtraItemMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/ApplianceMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/ItemInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/DonationReceiptInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/UserInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/DonationBookType.hbm.xml"/>
+    <mapping resource="com/vdtltest/AccountManagementMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/UserTempleRelation.hbm.xml"/>
+    <mapping resource="com/vdtltest/ElectionManagement.hbm.xml"/>
+    <mapping resource="com/vdtltest/RoomMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/FormMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/UsageItemInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/DonationBook.hbm.xml"/>
+    <mapping resource="com/vdtltest/YearMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/ConsumptionMinimumStockInfo.hbm.xml"/>
+    <mapping resource="com/vdtltest/SupplierItemTable.hbm.xml"/>
+    <mapping resource="com/vdtltest/AreaManagement.hbm.xml"/>
+    <mapping resource="com/vdtltest/ChartMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/ConsumptionMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/DonationReceiptMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/SupplierMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/BuildingMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/DonationItemMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/FloorMaster.hbm.xml"/>
+    <mapping resource="com/vdtltest/PrasadMaster.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>  

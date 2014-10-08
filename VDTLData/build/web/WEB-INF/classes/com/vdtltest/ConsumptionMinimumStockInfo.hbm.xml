@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.ConsumptionMinimumStockInfo" table="consumption_minimum_stock_info" catalog="templelatest">
+        <id name="consumptionMinStockId" type="java.lang.Integer">
+            <column name="consumption_min_stock_id" />
+            <generator class="identity" />
+        </id>
+        <property name="consumptionId" type="int">
+            <column name="consumption_id" not-null="true" />
+        </property>
+        <property name="minimumQuantity" type="int">
+            <column name="minimum_quantity" not-null="true" />
+        </property>
+        <property name="unitId" type="int">
+            <column name="unit_id" not-null="true" />
+        </property>
+        <property name="availableQuantity" type="int">
+            <column name="available_quantity" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+        <property name="DRecordStartdate" type="timestamp">
+            <column name="d_record_startdate" length="19" not-null="true" />
+        </property>
+        <property name="DRecordEnddate" type="timestamp">
+            <column name="d_record_enddate" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

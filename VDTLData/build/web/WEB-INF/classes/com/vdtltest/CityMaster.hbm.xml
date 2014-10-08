@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.CityMaster" table="city_master" catalog="templelatest">
+        <id name="cityId" type="java.lang.Integer">
+            <column name="city_id" />
+            <generator class="identity" />
+        </id>
+        <property name="cityName" type="string">
+            <column name="city_name" length="50" not-null="true" />
+        </property>
+        <property name="cityCode" type="int">
+            <column name="city_code" not-null="true" />
+        </property>
+        <property name="stateId" type="int">
+            <column name="state_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

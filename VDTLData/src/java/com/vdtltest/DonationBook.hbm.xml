@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.DonationBook" table="donation_book" catalog="templelatest">
+        <id name="donationBookId" type="java.lang.Integer">
+            <column name="donation_book_id" />
+            <generator class="identity" />
+        </id>
+        <property name="makerId" type="int">
+            <column name="maker_id" not-null="true" />
+        </property>
+        <property name="donationBookTypeId" type="int">
+            <column name="donation_book_type_id" not-null="true" />
+        </property>
+        <property name="donationBookNumber" type="int">
+            <column name="donation_book_number" not-null="true" />
+        </property>
+        <property name="nomination" type="string">
+            <column name="nomination" length="50" not-null="true" />
+        </property>
+        <property name="noOfReceipt" type="int">
+            <column name="no_of_receipt" not-null="true" />
+        </property>
+        <property name="totalRupees" type="int">
+            <column name="total_rupees" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <property name="systemDatetime" type="timestamp">
+            <column name="system_datetime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

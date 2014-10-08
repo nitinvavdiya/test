@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 8 Oct, 2014 11:47:29 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.vdtltest.DonationReceiptInfo" table="donation_receipt_info" catalog="templelatest">
+        <id name="donationReceiptInfoId" type="java.lang.Integer">
+            <column name="donation_receipt_info_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="accountManagementMaster" class="com.vdtltest.AccountManagementMaster" fetch="select">
+            <column name="account_id" not-null="true" />
+        </many-to-one>
+        <property name="receiptId" type="int">
+            <column name="receipt_id" not-null="true" />
+        </property>
+        <property name="guestDonorName" type="string">
+            <column name="guest_donor_name" length="80" not-null="true" />
+        </property>
+        <property name="prasadId" type="int">
+            <column name="prasad_id" not-null="true" />
+        </property>
+        <property name="amount" type="double">
+            <column name="amount" precision="10" not-null="true" />
+        </property>
+        <property name="prasadQuantity" type="int">
+            <column name="prasad_quantity" not-null="true" />
+        </property>
+        <property name="templeId" type="int">
+            <column name="temple_id" not-null="true" />
+        </property>
+        <property name="receiptTempleId" type="double">
+            <column name="receipt_temple_id" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
